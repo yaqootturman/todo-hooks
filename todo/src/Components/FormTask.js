@@ -27,7 +27,7 @@ const FormTask = ()=>{
                     </Button>
                 </Form.Group> 
             </Form>
-           { tasks.length>0 ? <Task tasks= {tasks}/> : ""}
+           { tasks.length>0 ? <Task tasks= {tasks} setArray={setArray}/> : ""}
         </>
     )
 
