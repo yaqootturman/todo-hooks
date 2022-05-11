@@ -1,13 +1,23 @@
 import './style.css'
-import {useState} from 'react'
+import React from 'react'
+import { Button,Card } from 'react-bootstrap';
 
-const Task =()=>{
-    console.log("Hellloo");
+const Task =(props)=>{
+    const {tasks} = props
     return(
         <>
-        <h1>
-            |Hello wo=rld
-        </h1>
+        {
+            tasks.map((task)=>{
+                return(
+                <Card style={{ display: 'flex',flexDirection: 'row' ,justifyContent: 'space-between',  alignItems: 'center'  }} >
+                        <Card.Text>
+                        {task.value}
+                        </Card.Text>
+                    <Button variant="primary">Delete/ Done</Button>
+                </Card>)
+                
+            })  
+        }
         </>
     )
 }

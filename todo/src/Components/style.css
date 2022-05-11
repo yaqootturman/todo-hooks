@@ -23,3 +23,10 @@
     height: 2rem;
     font-size: 18px;
 }
+.task{
+    display: flex;
+    height: 2rem;
+    font-size: x-large;
+    justify-content: space-between;
+    align-items: self-start;
+}
