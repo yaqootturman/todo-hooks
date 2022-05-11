@@ -1,7 +1,6 @@
-import React from 'react'
-import {useState} from 'react'
+import React ,{useState} from 'react'
 import { Button,Form } from 'react-bootstrap';
-
+import uniqueId from 'lodash/uniqueId';
 import Task from './Task'
 
 const FormTask = ()=>{
@@ -14,7 +13,7 @@ const FormTask = ()=>{
             <Form className="form" onSubmit={(e)=>{
                 e.preventDefault()
                 setArray(prevTask => [...tasks, {
-                    id: prevTask.length,
+                    id: uniqueId("prefix-"),  
                     value: task
                 }]);
             }}>
