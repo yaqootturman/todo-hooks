@@ -12,14 +12,16 @@ const FormTask = ()=>{
         <>
             <Form className="form" onSubmit={(e)=>{
                 e.preventDefault()
+                task =="" ? console.error("empty task"): 
                 setArray(prevTask => [...tasks, {
                     id: uniqueId("prefix-"),  
                     value: task
                 }]);
+            
             }}>
                 <Form.Group style={{ display: 'contents' }} className="mb-3" controlId="formBasicEmail">
                     <Form.Control inline type="text" placeholder="Enter task to do" value={task} onChange={(e)=>{
-                    setTask(e.target.value)
+                        setTask(e.target.value)
                     }}/> 
                     <Button  variant="primary" type="submit">
                     Submit
